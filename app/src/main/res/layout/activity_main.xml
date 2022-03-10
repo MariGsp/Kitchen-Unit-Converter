@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        app:layout_constraintStart_toStartOf="@id/icon_select_ingredient"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_options" />
+
+
+    <ImageView
+        android:id="@+id/icon_select_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quantity_to_convert"
+        app:srcCompat="@drawable/ic_scale" />
+
+    <RadioGroup
+        android:id="@+id/unit_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quantity_to_convert"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/cups_to_grams"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cups_to_grams" />
+
+        <RadioButton
+            android:id="@+id/grams_to_cups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/grams_to_cups" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/ingredient_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/select_ingredient"
+        app:layout_constraintTop_toBottomOf="@id/select_ingredient">
+
+        <RadioButton
+            android:id="@+id/water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/water" />
+
+        <RadioButton
+            android:id="@+id/milk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/milk" />
+
+        <RadioButton
+            android:id="@+id/oil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oil" />
+
+        <RadioButton
+            android:id="@+id/flour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flour" />
+
+        <RadioButton
+            android:id="@+id/sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sugar" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/select_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/select_ingredient"
+        app:layout_constraintBottom_toBottomOf="@id/icon_select_ingredient"
+
+        app:layout_constraintStart_toEndOf="@id/icon_select_ingredient"
+
+        />
+
+    <TextView
+        android:id="@+id/conversion_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/conversion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/convert_button"
+        app:layout_constraintTop_toBottomOf="@id/convert_button"
+        tools:text="Conversion: 1 cup of sugar = 165.61 grams" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/quantity_to_convert"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/quantity_to_convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quantity_to_convert_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

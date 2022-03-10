@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Kitchen Unit Converter</string>
+    <string name="quantity_to_convert">Quantity to convert</string>
+    <string name="cups_to_grams">Cups to grams</string>
+    <string name="grams_to_cups">Grams to cups</string>
+    <string name="water">Water</string>
+    <string name="milk">Milk</string>
+    <string name="oil">Oil</string>
+    <string name="flour">Flour</string>
+    <string name="sugar">Sugar</string>
+    <string name="select_ingredient">Select ingredient</string>
+    <string name="convert">Convert</string>
+    <string name="conversion"></string>
+
+
+</resources>
